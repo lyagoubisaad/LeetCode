@@ -3,41 +3,42 @@ package LeetCodeCategories.Graphs;
 import java.util.*;
 
 public class L_721_AccountsMerge {
+
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        boolean[] visited = new boolean[accounts.size()];
-        HashMap<Integer, List<String>> map = new HashMap<>();
-        for (int i=0;i<accounts.size();i++) {
-            if(visited[i]) continue;
-            visited[i] = true;
-            Set<String> elements = new HashSet<>();
-            for (int j = 1; j < accounts.get(i).size(); j++) {
-                elements.add(accounts.get(i).get(j));
-            }
-            for (int j=i+1;j<accounts.size();j++) {
-                if(visited[j]) continue;
-                boolean flag = false;
-                for (String record: elements) {
-                    if(accounts.get(j).contains(record)) {
-                        flag =true;
-                        visited[j] = true;
-                        break;
-                    }
-                }
-                if(flag) {
-                    for (int k=1;k<accounts.get(j).size();k++) {
-                        elements.add(accounts.get(j).get(k));
-                    }
+        HashMap<String, Set<String>> map = new HashMap<>();
+        for (List<String> account : accounts) {
+            for (int j = 1; j < account.size(); j++) {
+                for (int k = j+1; k < account.size(); k++) {
+                    map.computeIfAbsent(account.get(j), val -> new HashSet<>()).add(account.get(k));
+                    map.computeIfAbsent(account.get(k), val -> new HashSet<>()).add(account.get(j));
                 }
             }
-            map.put(i, new ArrayList<>(elements));
         }
-        List<List<String>> lists = new ArrayList<>();
-        for (Map.Entry<Integer, List<String >> entry: map.entrySet()) {
-            List<String> record = new ArrayList<>(entry.getValue());
-            Collections.sort(record);
-            record.add(0, accounts.get(entry.getKey()).get(0));
-            lists.add(new ArrayList<>(record));
+        HashSet<String> seen = new HashSet<>();
+        Iterator<List<String>> iterator = accounts.iterator();
+        while (iterator.hasNext()) {
+            List<String> account = iterator.next();
+            if (account.size() == 2) continue;
+            if (seen.contains(account.get(1))) {
+                iterator.remove();
+                continue;
+            }
+            List<String> tmp = new ArrayList<>();
+            dfs(account.get(1), map, seen, tmp);
+            Collections.sort(tmp);
+            tmp.add(0, account.get(0));
+            accounts.set(accounts.indexOf(account), tmp);
         }
-        return lists;
+        return accounts;
+    }
+
+    private List<String> dfs(String key, HashMap<String, Set<String>> map, HashSet<String> seen, List<String> result) {
+        result.add(key);
+        seen.add(key);
+        for (String elem: map.getOrDefault(key, new HashSet<>())) {
+            if(seen.contains(elem)) continue;
+            dfs(elem, map, seen, result);
+        }
+        return result;
     }
 }

@@ -20,4 +20,12 @@ public class TestUtils {
             );
         }
     }
+    public static void assertArrayEquals(double[] expected, double[] actual) {
+        if (!Arrays.equals(expected, actual)) {
+            throw new AssertionError(
+                    "Expected: " + Arrays.toString(expected) +
+                            " Actual: " + Arrays.toString(actual)
+            );
+        }
+    }
 }
