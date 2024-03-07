@@ -1,32 +1,28 @@
 package LeetCodeCategories.DynamicProgramming_OneD;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class L_120_Triangle {
-
-    int min = Integer.MAX_VALUE;
-
     public int minimumTotal(List<List<Integer>> triangle) {
-        Map<List<Integer>, Integer> map = new HashMap<>();
-        map.put(List.of(-1,0), 0);
-        helper(triangle, 0, 0, map);
-        return min;
-    }
+        // Using an array for memoization instead of HashMap with List keys
+        int[] memo = new int[triangle.size()];
 
-    private void helper(List<List<Integer>> triangle, int floor, int idx, Map<List<Integer>, Integer> map) {
-        if(map.containsKey(List.of(floor, idx))) return;
-        if(idx >= triangle.get(floor).size()) return;
-        int curr = triangle.get(floor).get(idx);
-        int prvHor = map.getOrDefault(List.of(floor-1, idx), Integer.MAX_VALUE);
-        int prvVer = map.getOrDefault(List.of(floor-1, idx-1), Integer.MAX_VALUE);
-        map.put(List.of(floor, idx), curr+Math.min(prvVer, prvHor));
-        if(floor == triangle.size()-1) {
-            min = Math.min(min, map.get(List.of(floor, idx)));
-            return;
+        // Initialize memoization array with last row of triangle
+        List<Integer> lastRow = triangle.get(triangle.size() - 1);
+        for (int i = 0; i < lastRow.size(); i++) {
+            memo[i] = lastRow.get(i);
         }
-        helper(triangle, floor+1, idx, map);
-        helper(triangle, floor+1, idx+1, map);
+
+        // Start from second last row and compute minimum path sum
+        for (int row = triangle.size() - 2; row >= 0; row--) {
+            List<Integer> currentRow = triangle.get(row);
+            for (int col = 0; col < currentRow.size(); col++) {
+                int value = currentRow.get(col);
+                memo[col] = value + Math.min(memo[col], memo[col + 1]);
+            }
+        }
+
+        // The final result is at the top of the memoization array
+        return memo[0];
     }
 }

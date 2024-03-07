@@ -31,7 +31,7 @@ public class L_120_TriangleTest {
     @Test
     public void forthTest() {
         List<List<Integer>> triangle = List.of(List.of(-1), List.of(3,2), List.of(1,-2,-1));
-        assertEquals(0, myClass.minimumTotal(triangle));
+        assertEquals(-1, myClass.minimumTotal(triangle));
     }
 
 }
