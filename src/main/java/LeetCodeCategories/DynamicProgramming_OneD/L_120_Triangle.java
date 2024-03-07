@@ -8,6 +8,7 @@ public class L_120_Triangle {
         List<Integer> lastRow = triangle.get(triangle.size() - 1);
         for (int i = 0; i < lastRow.size(); i++) {
             memo[i] = lastRow.get(i);
+
         }
         for (int row = triangle.size() - 2; row >= 0; row--) {
             List<Integer> currentRow = triangle.get(row);
