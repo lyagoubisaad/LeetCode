@@ -1,6 +1,6 @@
 package LeetCodeCategories.Linked_List;
 
-import Utils.ListNode;
+import utils.ListNode;
 
 public class L_2_AddTwoNumbers {
 

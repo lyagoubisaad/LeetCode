@@ -7,7 +7,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class giftingGroupsTest {
-
     giftingGroups myClass = new giftingGroups();
 
     @Test
