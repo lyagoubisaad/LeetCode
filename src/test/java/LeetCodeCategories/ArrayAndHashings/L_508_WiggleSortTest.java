@@ -1,17 +1,19 @@
-package LeetCodeCategories.ArrayAndHashings;
+package leetCodeCategories.ArrayAndHashings;
 
+import LeetCodeCategories.ArrayAndHashings.L_508_WiggleSort;
 import org.junit.Test;
 
-import static LeetCodeCategories.ArrayAndHashings.L_508_WiggleSort.wiggleSort;
 import static Utils.TestUtils.assertArrayEquals;
 
 public class L_508_WiggleSortTest {
+
+    L_508_WiggleSort myClass = new L_508_WiggleSort();
 
     @Test
     public void firstTest() {
         int[] nums = new int[] {3, 5, 2, 1, 6, 4};
         int[] wiggleSortedNums = new int[] {1, 6, 2, 5, 3, 4};
-        wiggleSort(nums);
+        myClass.wiggleSort(nums);
         assertArrayEquals(wiggleSortedNums, nums);
     }
 
@@ -19,7 +21,7 @@ public class L_508_WiggleSortTest {
     public void secondTest() {
         int[] nums = new int[] {1, 2, 3, 4};
         int[] wiggleSortedNums = new int[] {1,4,2,3};
-        wiggleSort(nums);
+        myClass.wiggleSort(nums);
         assertArrayEquals(wiggleSortedNums, nums);
     }
 
@@ -27,7 +29,7 @@ public class L_508_WiggleSortTest {
     public void thirdTest() {
         int[] nums = new int[] {1,1,1};
         int[] wiggleSortedNums = new int[] {1,1,1};
-        wiggleSort(nums);
+        myClass.wiggleSort(nums);
         assertArrayEquals(wiggleSortedNums, nums);
     }
 
@@ -35,7 +37,7 @@ public class L_508_WiggleSortTest {
     public void forthTest() {
         int[] nums = new int[] {};
         int[] wiggleSortedNums = new int[] {};
-        wiggleSort(nums);
+        myClass.wiggleSort(nums);
         assertArrayEquals(wiggleSortedNums, nums);
     }
 
@@ -43,7 +45,7 @@ public class L_508_WiggleSortTest {
     public void fifthTest() {
         int[] nums = new int[] {1};
         int[] wiggleSortedNums = new int[] {1};
-        wiggleSort(nums);
+        myClass.wiggleSort(nums);
         assertArrayEquals(wiggleSortedNums, nums);
     }
 }

@@ -48,7 +48,7 @@ public class ListNode {
     public int size() {
         ListNode current = this;
         int cpt = 0;
-        while (current.next != null) {
+        while (current != null) {
             current = current.next;
             cpt++;
         }
