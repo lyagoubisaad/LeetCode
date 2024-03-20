@@ -1,6 +1,6 @@
 package LeetCodeCategories.Linked_List;
 
-import Utils.ListNode;
+import utils.ListNode;
 
 public class L_21_Merge_Two_Sorted_Lists {
 
