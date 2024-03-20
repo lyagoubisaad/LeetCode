@@ -3,7 +3,7 @@ package LeetCodeCategories.ArrayAndHashings;
 import java.util.Arrays;
 
 public class L_508_WiggleSort {
-    public static void wiggleSort(int[] nums) {
+    public void wiggleSort(int[] nums) {
         Arrays.sort(nums);
         int[] wigleSortedArray = new int[nums.length];
         for (int i=0;i<nums.length/2;i++) {
@@ -16,8 +16,6 @@ public class L_508_WiggleSort {
             }
         }
 
-        for (int i=0;i<nums.length;i++) {
-            nums[i] = wigleSortedArray[i];
-        }
+        System.arraycopy(wigleSortedArray, 0, nums, 0, nums.length);
     }
 }

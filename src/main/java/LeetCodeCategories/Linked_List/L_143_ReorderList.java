@@ -2,21 +2,31 @@ package LeetCodeCategories.Linked_List;
 
 import utils.ListNode;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
 import java.util.Stack;
 
 public class L_143_ReorderList {
-    public static void reorderList(ListNode head) {
+    public void reorderList(ListNode head) {
+        ListNode curr = head.next;
+        Stack<ListNode> stack = new Stack<>();
+        int size = 0;
+        while (curr != null) {
+            stack.add(curr);
+            curr = curr.next;
+            size++;
+        }
+        curr = head;
+        while (size > 0) {
+            ListNode helper = curr.next;
+            curr.next = stack.pop();
+            curr = curr.next;
+            size--;
 
-    }
-
-    public static void main(String[] args) {
-        int[] arr = new int[] {1,2,3,4,5};
-        ListNode ln = new ListNode();
-        ln.push_back(arr);
-        reorderList(ln);
-        ln.display();
-
+            if(size > 0) {
+                curr.next = helper;
+                curr = curr.next;
+                size--;
+            }
+        }
+        curr.next = null;
     }
 }
