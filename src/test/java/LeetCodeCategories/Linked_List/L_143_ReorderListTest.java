@@ -1,8 +1,8 @@
 package leetCodeCategories.Linked_List;
 
+import LeetCodeCategories.Linked_List.L_143_ReorderList;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class L_143_ReorderListTest {
 

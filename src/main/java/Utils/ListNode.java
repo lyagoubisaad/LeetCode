@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 public class ListNode {
     public int val;
@@ -31,8 +31,8 @@ public class ListNode {
                 this.push_back(arr[i]);
             }
         } else {
-            for (int i = 0; i < arr.length; i++) {
-                this.push_back(arr[i]);
+            for (int element : arr) {
+                this.push_back(element);
             }
         }
     }
@@ -53,5 +53,15 @@ public class ListNode {
             cpt++;
         }
         return cpt;
+    }
+
+    public static boolean compare(ListNode first, ListNode second) {
+        if(first.size() != second.size()) return false;
+        while (first != null) {
+            if(first.val != second.val) return false;
+            first = first.next;
+            second = second.next;
+        }
+        return true;
     }
 }

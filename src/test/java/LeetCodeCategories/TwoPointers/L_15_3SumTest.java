@@ -1,5 +1,6 @@
 package leetCodeCategories.TwoPointers;
 
+import LeetCodeCategories.TwoPointers.L_15_3Sum;
 import org.junit.Test;
 
 import java.util.List;
