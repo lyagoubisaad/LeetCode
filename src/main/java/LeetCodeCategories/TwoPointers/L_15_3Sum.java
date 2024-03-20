@@ -5,32 +5,26 @@ import java.util.Arrays;
 import java.util.List;
 
 public class L_15_3Sum {
-    public static List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
+    public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
-        int curSum = 0;
-        int i=0;
-        int j= nums.length-1;
-        while (j>i) {
-            for (int k=i+1;k<j;k++) {
-                curSum = nums[k] + nums[j] + nums[i];
-                if(curSum == 0) {
-                    List<Integer> tmp = new ArrayList<>();
-                    tmp.add(nums[i]);
-                    tmp.add(nums[k]);
-                    tmp.add(nums[j]);
-                    if(!list.contains(tmp))list.add(tmp);
-                } else if(curSum > 0) {
-                    j--;
-                    break;
+        List<List<Integer>> result = new ArrayList<>();
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (i != 0 && nums[i] == nums[i - 1]) continue;
+            int j = i + 1;
+            int k = nums.length - 1;
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                if (sum == 0) {
+                    result.add(List.of(nums[i], nums[j], nums[k]));
+                    while (j < k && nums[j] == nums[j + 1]) j++;
+                    while (j < k && nums[k] == nums[k - 1]) k--;
+                    j++;
+                    k--;
                 }
+                if (sum < 0) j++;
+                if (sum > 0) k--;
             }
-            i++;
         }
-        return list;
-    }
-
-    public static void main(String[] args) {
-        threeSum(new int[] {-1,0,1,2,-1,-4,-2,-3,3,0,4});
+        return result;
     }
 }

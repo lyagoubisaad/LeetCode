@@ -1,27 +1,19 @@
 package LeetCodeCategories.slidingWindow;
 
 public class L_121_BestTimetoBuyandSellStock {
-    public static int maxProfit(int[] prices) {
+    public int maxProfit(int[] prices) {
+        int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        int min = prices[0];
-        int diff = 0;
-        for (int i=1;i<prices.length;i++) {
-            if(prices[i] < min) {
+        int maxProfit = 0;
+        for (int price : prices) {
+            if (price < min) {
+                min = price;
                 max = Integer.MIN_VALUE;
-                min = prices[i];
-            } else {
-                if(prices[i] > max) {
-                    max = prices[i];
-                    diff = Math.max(diff, max-min);
-                }
+            } else if (price > max) {
+                max = price;
+                maxProfit = Math.max(maxProfit, max - min);
             }
         }
-        return diff;
+        return maxProfit;
     }
-
-    public static void main(String[] args) {
-        int[] prices = new int[]{2, 4, 1};
-        System.out.println(maxProfit(prices));
-    }
-
 }
