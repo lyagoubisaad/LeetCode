@@ -2,35 +2,25 @@ package LeetCodeCategories.Linked_List;
 
 import utils.ListNode;
 
-import java.util.Stack;
-
 public class L_19_RemoveNthNodeFromEndofList {
-    public static ListNode removeNthFromEnd(ListNode head, int n) {
-        Stack<Integer> stack = new Stack<>();
-        while (head != null) {
-            stack.add(head.val);
-            head = head.next;
-        }
-        Stack<Integer> stack1 = new Stack<>();
-        while (!stack.isEmpty()) {
-            n--;
-            if(n!=0) stack1.add(stack.pop());
-            else stack.pop();
-        }
-        if(stack1.isEmpty()) return null;
-        head = new ListNode(stack1.pop());
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode curr = head;
-        while (!stack1.isEmpty()) {
-            head.next = new ListNode(stack1.pop());
-            head = head.next;
+        int size = 0;
+        while (curr != null) {
+            size++;
+            curr = curr.next;
         }
-        return curr;
-    }
-
-    public static void main(String[] args) {
-        ListNode ln = new ListNode();
-        ln.push_back(new int[] {1,2,3,4,5});
-        ln = removeNthFromEnd(ln,2);
-        ln.display();
+        size = size-n;
+        if(size == 0) return head.next;
+        curr = head;
+        while (curr != null) {
+            size--;
+            if(size == 0) {
+                curr.next = curr.next.next;
+                break;
+            }
+            curr = curr.next;
+        }
+        return head;
     }
 }

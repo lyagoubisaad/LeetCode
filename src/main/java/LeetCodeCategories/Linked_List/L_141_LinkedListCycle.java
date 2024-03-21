@@ -2,19 +2,14 @@ package LeetCodeCategories.Linked_List;
 
 import utils.ListNode;
 
-import java.util.HashMap;
-
 public class L_141_LinkedListCycle {
 
     public boolean hasCycle(ListNode head) {
-
-        if(head == null) return false;
-        HashMap hm = new HashMap();
-        ListNode current = head;
-        while (current.next != null) {
-            if(hm.containsKey(current)) return true;
-            else hm.put(current,current.val);
-            current = current.next;
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(fast == slow) return true;
         }
         return false;
     }

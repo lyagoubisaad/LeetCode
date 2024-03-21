@@ -56,6 +56,9 @@ public class ListNode {
     }
 
     public static boolean compare(ListNode first, ListNode second) {
+        if(first == null && second == null) return true;
+        if(first == null) return false;
+        if(second == null) return false;
         if(first.size() != second.size()) return false;
         while (first != null) {
             if(first.val != second.val) return false;
@@ -63,5 +66,19 @@ public class ListNode {
             second = second.next;
         }
         return true;
+    }
+
+    public void createCycle(int pos) {
+        if(pos < 0) return;
+        ListNode helper = new ListNode();
+        ListNode curr = this;
+        while (curr.next != null) {
+            if(pos == 0) {
+                helper = this;
+            }
+            pos--;
+            curr = curr.next;
+        }
+        curr.next = helper;
     }
 }
