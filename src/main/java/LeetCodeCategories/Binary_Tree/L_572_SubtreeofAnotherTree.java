@@ -6,7 +6,9 @@ import utils.TreeNode;
 public class L_572_SubtreeofAnotherTree {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
         if(root == null) return false;
-        if(root == subRoot) return true;
+        //if(root.equals(subRoot)) return true; works only here since the equal method has been overrided
+        // for Leetcode or any external platform use the line below
+        if(compare(root, subRoot)) return true;
         return (isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot));
     }
 

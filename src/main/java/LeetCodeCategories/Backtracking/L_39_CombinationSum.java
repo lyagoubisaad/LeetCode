@@ -23,8 +23,4 @@ public class L_39_CombinationSum {
             subset.remove(subset.size()-1);
         }
     }
-
-    public static void main(String[] args) {
-        new L_39_CombinationSum().combinationSum(new int[] {2,3,7}, 7);
-    }
 }

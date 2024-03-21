@@ -16,8 +16,4 @@ public class L_98_ValidateBinarySearchTree {
         return helper(min, node.left, node.val) && helper(node.val, node.right, max);
     }
 
-    public static void main(String[] args) {
-        TreeNode node = TreeNode.formTree(new Integer[]{-2147483648,null,2147483647});
-        isValidBST(node);
-    }
 }
