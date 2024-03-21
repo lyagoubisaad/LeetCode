@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import Utils.TreeNode;
+import utils.TreeNode;
 
 public class L_1448_CountGoodNodesinBinaryTree {
     public int goodNodes(TreeNode root) {

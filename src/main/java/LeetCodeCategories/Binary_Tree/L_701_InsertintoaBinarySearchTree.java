@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import Utils.TreeNode;
+import utils.TreeNode;
 
 public class L_701_InsertintoaBinarySearchTree {
     public TreeNode insertIntoBST(TreeNode root, int val) {
