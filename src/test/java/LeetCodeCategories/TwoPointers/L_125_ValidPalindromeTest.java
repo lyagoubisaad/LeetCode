@@ -1,9 +1,8 @@
-package leetCodeCategories.TwoPointers;
+package LeetCodeCategories.TwoPointers;
 
-import LeetCodeCategories.TwoPointers.L_125_ValidPalindrome;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_125_ValidPalindromeTest {
 

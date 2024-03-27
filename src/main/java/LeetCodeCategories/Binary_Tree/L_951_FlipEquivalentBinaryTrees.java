@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
 public class L_951_FlipEquivalentBinaryTrees {
     public static boolean flipEquiv(TreeNode root1, TreeNode root2) {

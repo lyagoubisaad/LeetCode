@@ -1,9 +1,8 @@
-package leetCodeCategories.slidingWindow;
+package LeetCodeCategories.slidingWindow;
 
-import LeetCodeCategories.slidingWindow.L_3_LongestSubstringWithoutRepeatingCharacters;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_3_LongestSubstringWithoutRepeatingCharactersTest {
 

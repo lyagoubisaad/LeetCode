@@ -2,7 +2,7 @@ package LeetCodeCategories.Graphs;
 
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_1254_NumberClosedIslandsTest {
 

@@ -1,6 +1,6 @@
 package LeetCodeCategories.DynamicProgramming_OneD;
 
-import java.util.*;
+import java.util.List;
 
 public class L_120_Triangle {
     public int minimumTotal(List<List<Integer>> triangle) {

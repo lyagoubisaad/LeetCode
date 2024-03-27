@@ -3,7 +3,7 @@ package LeetCodeCategories.Greedy;
 import org.junit.Test;
 
 import static LeetCodeCategories.Greedy.L_1647_MinimumDeletionstoMakeCharacterFrequenciesUnique.minDeletions;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_1647_MinimumDeletionstoMakeCharacterFrequenciesUniqueTest {
 

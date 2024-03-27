@@ -1,6 +1,6 @@
 package LeetCodeCategories.Linked_List;
 
-import utils.ListNode;
+import Utils.ListNode;
 
 public class L_2095_Delete_the_Middle_Node_of_a_Linked_List {
 

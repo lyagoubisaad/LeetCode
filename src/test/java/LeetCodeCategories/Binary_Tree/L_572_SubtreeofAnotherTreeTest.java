@@ -1,10 +1,9 @@
-package leetCodeCategories.Binary_Tree;
+package LeetCodeCategories.Binary_Tree;
 
-import LeetCodeCategories.Binary_Tree.L_572_SubtreeofAnotherTree;
+import Utils.TreeNode;
 import org.junit.Test;
-import utils.TreeNode;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class L_572_SubtreeofAnotherTreeTest {
 

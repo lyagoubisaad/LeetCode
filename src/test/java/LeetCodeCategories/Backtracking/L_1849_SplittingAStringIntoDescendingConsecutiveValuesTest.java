@@ -3,7 +3,7 @@ package LeetCodeCategories.Backtracking;
 import org.junit.Test;
 
 import static LeetCodeCategories.Backtracking.L_1849_SplittingAStringIntoDescendingConsecutiveValues.splitString;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_1849_SplittingAStringIntoDescendingConsecutiveValuesTest {
 

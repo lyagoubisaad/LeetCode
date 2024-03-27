@@ -2,8 +2,8 @@ package LeetCodeCategories.intervals;
 
 import org.junit.Test;
 
-import static Utils.TestUtils.assertArrayEquals;
 import static LeetCodeCategories.intervals.L_1851_MinimumIntervaltoIncludeEachQuery.minInterval;
+import static Utils.TestUtils.assertArrayEquals;
 
 public class L_1851_MinimumIntervaltoIncludeEachQueryTest {
 

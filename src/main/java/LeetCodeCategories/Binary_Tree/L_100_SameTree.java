@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
 public class L_100_SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {

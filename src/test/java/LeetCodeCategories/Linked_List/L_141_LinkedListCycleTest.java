@@ -1,10 +1,10 @@
-package leetCodeCategories.Linked_List;
+package LeetCodeCategories.Linked_List;
 
-import LeetCodeCategories.Linked_List.L_141_LinkedListCycle;
+import Utils.ListNode;
 import org.junit.Test;
-import utils.ListNode;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class L_141_LinkedListCycleTest {
 

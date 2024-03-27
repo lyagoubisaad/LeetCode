@@ -3,7 +3,7 @@ package LeetCodeCategories.ArrayAndHashings;
 import org.junit.Test;
 
 import static LeetCodeCategories.ArrayAndHashings.L_2306_NamingaCompany.distinctNames;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_2306_NamingaCompanyTest {
     @Test

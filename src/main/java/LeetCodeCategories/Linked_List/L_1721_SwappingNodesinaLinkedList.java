@@ -1,6 +1,6 @@
 package LeetCodeCategories.Linked_List;
 
-import utils.ListNode;
+import Utils.ListNode;
 
 import java.util.Stack;
 

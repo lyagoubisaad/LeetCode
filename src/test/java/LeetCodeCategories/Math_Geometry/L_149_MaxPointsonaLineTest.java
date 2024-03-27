@@ -3,7 +3,7 @@ package LeetCodeCategories.Math_Geometry;
 import org.junit.Test;
 
 import static LeetCodeCategories.Math_Geometry.L_149_MaxPointsonaLine.maxPoints;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_149_MaxPointsonaLineTest {
 

@@ -1,12 +1,11 @@
-package leetCodeCategories.Linked_List;
+package LeetCodeCategories.Linked_List;
 
-import LeetCodeCategories.Linked_List.L_206_ReverseLinkedList;
+import Utils.Array;
+import Utils.ListNode;
 import org.junit.Test;
-import utils.Array;
-import utils.ListNode;
 
+import static Utils.ListNode.compare;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static utils.ListNode.compare;
 
 public class L_206_ReverseLinkedListTest {
 

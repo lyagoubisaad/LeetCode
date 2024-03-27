@@ -1,11 +1,10 @@
-package leetCodeCategories.TwoPointers;
+package LeetCodeCategories.TwoPointers;
 
-import LeetCodeCategories.TwoPointers.L_15_3Sum;
 import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_15_3SumTest {
 

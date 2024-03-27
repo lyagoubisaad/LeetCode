@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
 public class L_1325_DeleteLeavesWithaGivenValue {
     public static TreeNode removeLeafNodes(TreeNode root, int target) {

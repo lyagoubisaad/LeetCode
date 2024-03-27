@@ -1,6 +1,6 @@
 package LeetCodeCategories.Linked_List;
 
-import utils.ListNode;
+import Utils.ListNode;
 
 public class L_19_RemoveNthNodeFromEndofList {
     public ListNode removeNthFromEnd(ListNode head, int n) {

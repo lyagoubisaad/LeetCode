@@ -1,9 +1,8 @@
-package leetCodeCategories.DynamicProgramming_OneD;
+package LeetCodeCategories.DynamicProgramming_OneD;
 
-import LeetCodeCategories.DynamicProgramming_OneD.L_377_CombinationSumIV;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_377_CombinationSumIVTest {
 

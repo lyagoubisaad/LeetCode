@@ -1,7 +1,7 @@
 package LeetCodeCategories.Binary_Tree;
 
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
 public class L_572_SubtreeofAnotherTree {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {

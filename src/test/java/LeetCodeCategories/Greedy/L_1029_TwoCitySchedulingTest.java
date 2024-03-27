@@ -3,7 +3,7 @@ package LeetCodeCategories.Greedy;
 import org.junit.Test;
 
 import static LeetCodeCategories.Greedy.L_1029_TwoCityScheduling.twoCitySchedCost;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_1029_TwoCitySchedulingTest {
 

@@ -1,8 +1,5 @@
 package LeetCodeContests;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-
 public class L_100204_MinimumTimeRevertWordInitialState {
     public static int minimumTimeToInitialState(String word, int k) {
         int cpt = 0;

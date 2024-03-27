@@ -2,8 +2,8 @@ package LeetCodeCategories.slidingWindow;
 
 import org.junit.Test;
 
-import static Utils.TestUtils.assertArrayEquals;
 import static LeetCodeCategories.slidingWindow.L_239_SlidingWindowMaximum.maxSlidingWindow;
+import static Utils.TestUtils.assertArrayEquals;
 
 public class L_239_SlidingWindowMaximumTest {
 

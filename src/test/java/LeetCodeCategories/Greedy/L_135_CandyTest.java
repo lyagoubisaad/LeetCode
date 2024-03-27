@@ -3,7 +3,7 @@ package LeetCodeCategories.Greedy;
 import org.junit.Test;
 
 import static LeetCodeCategories.Greedy.L_135_Candy.candy;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_135_CandyTest {
     @Test

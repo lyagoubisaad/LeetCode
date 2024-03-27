@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static LeetCodeCategories.Backtracking.L_46_Permutations.permute;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_46_PermutationsTest {
 

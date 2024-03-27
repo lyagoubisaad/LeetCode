@@ -1,6 +1,7 @@
 package LeetCodeCategories.Graphs;
 
 import org.junit.Test;
+
 import static Utils.TestUtils.assertArrayEquals;
 
 public class L_1129_ShortestPathwithAlternatingColorsTest {

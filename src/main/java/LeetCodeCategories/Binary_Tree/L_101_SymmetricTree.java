@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
 public class L_101_SymmetricTree {
     public boolean isSymmetric(TreeNode root) {

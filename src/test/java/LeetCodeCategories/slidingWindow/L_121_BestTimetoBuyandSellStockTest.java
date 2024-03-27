@@ -1,9 +1,8 @@
-package leetCodeCategories.slidingWindow;
+package LeetCodeCategories.slidingWindow;
 
-import LeetCodeCategories.slidingWindow.L_121_BestTimetoBuyandSellStock;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_121_BestTimetoBuyandSellStockTest {
 

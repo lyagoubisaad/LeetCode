@@ -1,10 +1,9 @@
-package leetCodeCategories.Binary_Tree;
+package LeetCodeCategories.Binary_Tree;
 
-import LeetCodeCategories.Binary_Tree.L_104_MaximumDepthOfBinaryTree;
-import utils.TreeNode;
+import Utils.TreeNode;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_104_MaximumDepthOfBinaryTreeTest {
 

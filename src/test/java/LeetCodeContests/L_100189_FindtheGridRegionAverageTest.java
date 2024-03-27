@@ -3,7 +3,7 @@ package LeetCodeContests;
 import org.junit.Test;
 
 import static LeetCodeContests.L_100189_FindtheGridRegionAverage.resultGrid;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_100189_FindtheGridRegionAverageTest {
 

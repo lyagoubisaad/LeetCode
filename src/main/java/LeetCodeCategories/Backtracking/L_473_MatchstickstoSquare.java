@@ -1,6 +1,6 @@
 package LeetCodeCategories.Backtracking;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class L_473_MatchstickstoSquare {
     public static boolean makesquare(int[] matchsticks) {

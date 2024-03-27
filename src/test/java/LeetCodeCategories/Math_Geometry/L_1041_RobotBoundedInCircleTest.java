@@ -3,7 +3,7 @@ package LeetCodeCategories.Math_Geometry;
 import org.junit.Test;
 
 import static LeetCodeCategories.Math_Geometry.L_1041_RobotBoundedInCircle.isRobotBounded;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_1041_RobotBoundedInCircleTest {
     @Test

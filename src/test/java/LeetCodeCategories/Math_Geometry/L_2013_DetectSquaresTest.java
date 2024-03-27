@@ -2,7 +2,7 @@ package LeetCodeCategories.Math_Geometry;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_2013_DetectSquaresTest {
     @Test

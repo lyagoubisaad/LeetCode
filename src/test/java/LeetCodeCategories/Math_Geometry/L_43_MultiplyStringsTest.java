@@ -3,7 +3,7 @@ package LeetCodeCategories.Math_Geometry;
 import org.junit.Test;
 
 import static LeetCodeCategories.Math_Geometry.L_43_MultiplyStrings.multiply;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_43_MultiplyStringsTest {
     @Test

@@ -3,7 +3,7 @@ package LeetCodeCategories.intervals;
 import org.junit.Test;
 
 import static LeetCodeCategories.intervals.L_1288_RemoveCoveredIntervals.removeCoveredIntervals;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_1288_RemoveCoveredIntervalsTest {
 

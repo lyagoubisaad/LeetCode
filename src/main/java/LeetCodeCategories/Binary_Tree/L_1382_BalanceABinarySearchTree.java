@@ -1,8 +1,10 @@
 package LeetCodeCategories.Binary_Tree;
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 public class L_1382_BalanceABinarySearchTree {
     public static TreeNode balanceBST(TreeNode root) {

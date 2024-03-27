@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static LeetCodeCategories.Backtracking.L_93_RestoreIPAddresses.restoreIpAddresses;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_93_RestoreIPAddressesTest {
 

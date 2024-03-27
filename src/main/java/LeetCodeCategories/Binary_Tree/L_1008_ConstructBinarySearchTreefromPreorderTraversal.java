@@ -1,6 +1,6 @@
 package LeetCodeCategories.Binary_Tree;
 
-import utils.TreeNode;
+import Utils.TreeNode;
 
 public class L_1008_ConstructBinarySearchTreefromPreorderTraversal {
     public static TreeNode bstFromPreorder(int[] preorder) {

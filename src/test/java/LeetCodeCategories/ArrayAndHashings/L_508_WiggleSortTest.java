@@ -1,6 +1,5 @@
-package leetCodeCategories.ArrayAndHashings;
+package LeetCodeCategories.ArrayAndHashings;
 
-import LeetCodeCategories.ArrayAndHashings.L_508_WiggleSort;
 import org.junit.Test;
 
 import static Utils.TestUtils.assertArrayEquals;

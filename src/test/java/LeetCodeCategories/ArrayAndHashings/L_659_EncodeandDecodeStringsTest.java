@@ -8,7 +8,7 @@ import java.util.List;
 
 import static LeetCodeCategories.ArrayAndHashings.L_659_EncodeandDecodeStrings.decode;
 import static LeetCodeCategories.ArrayAndHashings.L_659_EncodeandDecodeStrings.encode;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class L_659_EncodeandDecodeStringsTest {
 

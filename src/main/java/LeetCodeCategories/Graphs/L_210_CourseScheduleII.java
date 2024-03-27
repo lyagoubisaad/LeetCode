@@ -1,5 +1,9 @@
 package LeetCodeCategories.Graphs;
-import java.util.*;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
 
 public class L_210_CourseScheduleII {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
@@ -8,9 +12,9 @@ public class L_210_CourseScheduleII {
         for (int i=0;i<numCourses;i++) {
             adj.add(new ArrayList<>());
         }
-        for (int i=0;i<prerequisites.length;i++) {
-            int firstElement = prerequisites[i][0];
-            int secondElement = prerequisites[i][1];
+        for (int[] prerequisite : prerequisites) {
+            int firstElement = prerequisite[0];
+            int secondElement = prerequisite[1];
             adj.get(secondElement).add(firstElement);
             degree[firstElement]++;
         }
