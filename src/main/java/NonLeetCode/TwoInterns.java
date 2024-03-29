@@ -3,7 +3,7 @@ package NonLeetCode;
 import java.util.*;
 
 public class TwoInterns {
-    public static int getMaximumRewardPoints(int k, int[] reward_1, int[] reward_2) {
+    public static int getMaximumRewardPointsV1(int k, int[] reward_1, int[] reward_2) {
         int n = reward_1.length;
         int max = 0;
         PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());
@@ -28,4 +28,13 @@ public class TwoInterns {
         return max;
     }
 
+    public static int getMaximumRewardPoints(int k, int[] reward_1, int[] reward_2) {
+        PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());
+        for (int i = 0; i < reward_2.length; i++) {
+            heap.offer(reward_1[i]-reward_2[i]);
+            if (i > 0) reward_2[i] += reward_2[i-1];
+        }
+        while (k-- > 0) reward_2[reward_2.length-1] += heap.poll();
+        return reward_2[reward_2.length-1];
+    }
 }

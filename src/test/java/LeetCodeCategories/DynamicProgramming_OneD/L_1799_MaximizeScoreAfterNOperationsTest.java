@@ -32,4 +32,11 @@ public class L_1799_MaximizeScoreAfterNOperationsTest {
         assertEquals(527, myClass.maxScore(nums));
     }
 
+    @Test
+    public void fifthTest() {
+        int[] nums = new int[] {175606,167380,267614,552999,998200,176313,688555,286172};
+        assertEquals(160, myClass.maxScore(nums));
+    }
+
+
 }

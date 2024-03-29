@@ -1,50 +1,41 @@
 package LeetCodeCategories.DynamicProgramming_OneD;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class L_691_StickersToSpellWord {
     public int minStickers(String[] stickers, String target) {
-        int[] targetLetters = new int[26];
+
+        List<HashMap<Character, Integer>> stickersMap = new ArrayList<>();
+        HashMap<Character, Integer> targetMap = new HashMap<>();
         for (int i=0;i<target.length();i++) {
-            targetLetters[target.charAt(i)-'a']++;
+            targetMap.put(target.charAt(i), targetMap.getOrDefault(target.charAt(i), 0)+1);
         }
-        int[] targetLettersCopy = Arrays.copyOf(targetLetters, targetLetters.length);
-        List<int[]> list = new ArrayList<>();
         for (String sticker : stickers) {
-            int[] tmp = new int[26];
+            HashMap<Character, Integer> map = new HashMap<>();
             for (int j = 0; j < sticker.length(); j++) {
-                tmp[sticker.charAt(j)-'a']++;
-                targetLettersCopy[sticker.charAt(j)-'a']--;
+                if(!targetMap.containsKey(sticker.charAt(j))) continue;
+                map.put(sticker.charAt(j), map.getOrDefault(sticker.charAt(j), 0) + 1);
             }
-            list.add(tmp);
+            if(map.isEmpty()) continue;
+            stickersMap.add(new HashMap<>(map));
         }
-        for (int i=0;i<26;i++) {
-            if(targetLettersCopy[i] == targetLetters[i] && targetLettersCopy[i] != 0) return -1;
-        }
-        int minStick = Integer.MAX_VALUE;
-        for (int i=0;i<stickers.length;i++) {
-            minStick = Math.min(minStick,helper(i, targetLetters, stickers, list));
-        }
-        return minStick;
+        return helper(targetMap, stickersMap);
     }
 
-    private int helper(int idx, int[] targetLetters, String[] stickers, List<int[]> list) {
-        for (int i=0;i<stickers[idx].length();i++) {
-            targetLetters[stickers[idx].charAt(i)-'a']--;
-        }
-        boolean flag = true;
-        for (int i=0;i<26;i++) {
-            if (targetLetters[i] > 0) {
-                flag = false;
-                break;
+    private int helper(HashMap<Character, Integer> targetMap, List<HashMap<Character, Integer>> stickersMap) {
+        if(targetMap.isEmpty()) return 0;
+        int result = 1000000;
+        for (HashMap<Character, Integer> map : stickersMap) {
+            HashMap<Character, Integer> copyTargetMap = new HashMap<>(targetMap);
+            for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+                if(!copyTargetMap.containsKey(entry.getKey())) continue;
+                copyTargetMap.put(entry.getKey(), copyTargetMap.get(entry.getKey())-1);
+                if(copyTargetMap.get(entry.getKey()) == 0) copyTargetMap.remove(entry.getKey());
             }
-        }
-        if(flag) return 0;
-        int result = 0;
-        for (int i=0;i<stickers.length;i++) {
-            result = Math.min(result, helper(i, targetLetters, stickers, list));
+            result = Math.min(result, 1+helper(new HashMap<>(copyTargetMap), stickersMap));
         }
         return 1+result;
     }

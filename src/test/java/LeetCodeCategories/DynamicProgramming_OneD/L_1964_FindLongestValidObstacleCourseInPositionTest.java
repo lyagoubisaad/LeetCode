@@ -10,8 +10,8 @@ public class L_1964_FindLongestValidObstacleCourseInPositionTest {
 
     @Test
     public void firstTest() {
-        int[] obstacles = new int[] {1,2,3,2};
-        assertArrayEquals(new int[] {1,2,3,2}, myClass.longestObstacleCourseAtEachPosition(obstacles));
+        int[] obstacles = new int[] {1,2,3,2,4};
+        assertArrayEquals(new int[] {1,2,3,3,5}, myClass.longestObstacleCourseAtEachPosition(obstacles));
     }
 
     @Test
@@ -22,8 +22,14 @@ public class L_1964_FindLongestValidObstacleCourseInPositionTest {
 
     @Test
     public void thirdTest() {
-        int[] obstacles = new int[] {3,1,5,6,4,2};
-        assertArrayEquals(new int[] {1,1,2,3,2,2}, myClass.longestObstacleCourseAtEachPosition(obstacles));
+        int[] obstacles = new int[] {3,1,5,6,4,2,7,4};
+        assertArrayEquals(new int[] {1,1,2,3,2,2,4,3}, myClass.longestObstacleCourseAtEachPosition(obstacles));
+    }
+
+    @Test
+    public void forthTest() {
+        int[] obstacles = new int[] {5,1,5,5,1,3,4,5,1,4};
+        assertArrayEquals(new int[] {1,1,2,3,2,3,4,5,3,5}, myClass.longestObstacleCourseAtEachPosition(obstacles));
     }
 
 }

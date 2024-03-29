@@ -1,9 +1,6 @@
 package LeetCodeCategories.DynamicProgramming_OneD;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class L_1799_MaximizeScoreAfterNOperations {
     public int maxScore(int[] nums) {
@@ -21,14 +18,11 @@ public class L_1799_MaximizeScoreAfterNOperations {
             }
         }
         int length = nums.length/2;
-        HashMap<HashSet<Integer>, Integer> dp = new HashMap<>();
-        int sum = helper(storeSet, storeGcd, queue, length, dp);
-        return sum;
+        return helper(storeSet, storeGcd, queue, length);
     }
 
-    public int helper(HashSet<Integer> storeSet, HashMap<Integer, Integer> storeGcd, Queue<int[]> queue, int length, HashMap<HashSet<Integer>, Integer> dp) {
+    public int helper(HashSet<Integer> storeSet, HashMap<Integer, Integer> storeGcd, Queue<int[]> queue, int length) {
         if (length == 0) return 0;
-        if(dp.containsKey(storeSet)) return dp.get(storeSet);
         int maxResult = 0;
         while (!storeSet.contains(queue.peek()[1]) || !storeSet.contains(queue.peek()[2])) queue.poll();
         int size = storeGcd.get(queue.peek()[0]);
@@ -40,8 +34,7 @@ public class L_1799_MaximizeScoreAfterNOperations {
             }
             storeSet.remove(elements[1]);
             storeSet.remove(elements[2]);
-            maxResult = Math.max(length * elements[0] + helper(storeSet, storeGcd, queue, length - 1, dp), maxResult);
-            dp.put(storeSet, maxResult);
+            maxResult = Math.max(length * elements[0] + helper(storeSet, storeGcd, new ArrayDeque<>(queue), length - 1), maxResult);
             storeSet.add(elements[1]);
             storeSet.add(elements[2]);
             queue.offer(elements);

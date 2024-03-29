@@ -2,16 +2,25 @@ package LeetCodeCategories.DynamicProgramming_OneD;
 
 public class L_1964_FindLongestValidObstacleCourseInPosition {
     public int[] longestObstacleCourseAtEachPosition(int[] obstacles) {
-        int[] result = new int[obstacles.length];
-        for (int i=0;i<obstacles.length;i++) {
-            result[i] = helper(0, i, obstacles, obstacles[i], 0);
+        int n = obstacles.length;
+        int[] dp = new int[n];
+        int[] ans = new int[n];
+        int len = 0;
+        for (int i = 0; i < n; i++) {
+            int idx = binarySearch(dp, 0, len - 1, obstacles[i]);
+            dp[idx] = obstacles[i];
+            if (idx == len) len++;
+            ans[i] = idx + 1;
         }
-        return result;
+        return ans;
     }
 
-    private int helper(int idx, int i, int[] obstacles, int max, int prv) {
-        if(idx == i) return 1;
-        if(obstacles[i] > max || obstacles[i] < prv) return helper(idx+1, i, obstacles, max, prv);
-        return Math.max(helper(idx+1, i, obstacles, max, prv), 1+helper(idx+1, i, obstacles, max, obstacles[i]));
+    private int binarySearch(int[] dp, int left, int right, int target) {
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (dp[mid] <= target) left = mid + 1;
+            else right = mid - 1;
+        }
+        return left;
     }
 }
