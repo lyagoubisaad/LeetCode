@@ -7,11 +7,8 @@ public class L_1631_PathWithMinimumEffort {
     public int minimumEffortPath(int[][] heights) {
         int[][] directions = new int[][] {{0,-1}, {0,1}, {1,0}, {-1,0}};
         int[][] distance = new int[heights.length][heights[0].length];
-        dfs(directions, heights, new boolean[heights.length][heights[0].length], new PriorityQueue<>(Comparator.comparingInt(a -> a[0])), distance);
-        return distance[heights.length-1][heights[0].length-1];
-    }
-
-    private void dfs(int[][] directions, int[][] heights, boolean[][] seen, PriorityQueue<int[]> minHeap, int[][] distance) {
+        boolean[][] seen = new boolean[heights.length][heights[0].length];
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
         minHeap.add(new int[] {0,0,0});
         while (!minHeap.isEmpty()) {
             int[] element = minHeap.poll();
@@ -27,6 +24,7 @@ public class L_1631_PathWithMinimumEffort {
                 }
             }
         }
+        return distance[heights.length-1][heights[0].length-1];
     }
 
     private boolean isValid(int y, int x, int[][] heights) {
