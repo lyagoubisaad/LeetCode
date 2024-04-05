@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class L_1220_CountVowelsPermutation {
+public class L1220CountVowelsPermutation {
 
     int mod = 1000000007;
     public int countVowelPermutation(int n) {

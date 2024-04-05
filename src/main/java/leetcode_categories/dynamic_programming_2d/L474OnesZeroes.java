@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_474_OnesZeroes {
+public class L474OnesZeroes {
 
     public int findMaxForm(String[] strs, int m, int n) {
         int result = 0;

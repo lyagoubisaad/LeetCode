@@ -2,7 +2,7 @@ package leetcode_categories.dynamic_programming_2d;
 
 import java.util.HashMap;
 
-public class L_97_InterleavingString {
+public class L97InterleavingString {
     public boolean isInterleave(String s1, String s2, String s3) {
         HashMap<String, Boolean> cache = new HashMap<>();
         return helper( s1.toCharArray(), 0, s2.toCharArray(), 0, s3.toCharArray(), 0, cache);
@@ -28,6 +28,6 @@ public class L_97_InterleavingString {
     }
 
     public static void main(String[] args) {
-        System.out.println(new L_97_InterleavingString().isInterleave("a", "b", "a"));
+        System.out.println(new L97InterleavingString().isInterleave("a", "b", "a"));
     }
 }

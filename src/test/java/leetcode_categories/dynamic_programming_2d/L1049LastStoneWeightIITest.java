@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 import utils.Convertor;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class L_1049_Last_Stone_Weight_IITest {
+public class L1049LastStoneWeightIITest {
 
-    L_1049_Last_Stone_Weight_II myClass;
+    L1049LastStoneWeightII myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_1049_Last_Stone_Weight_II();
+        myClass = new L1049LastStoneWeightII();
         convertor = new Convertor();
 
     }

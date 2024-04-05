@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_1220_CountVowelsPermutationTest {
 
-    L_1220_CountVowelsPermutation myClass;
+    L1220CountVowelsPermutation myClass;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_1220_CountVowelsPermutation();
+        myClass = new L1220CountVowelsPermutation();
     }
 
     @Test

@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_474_OnesZeroesTest {
 
-    L_474_OnesZeroes myClass;
+    L474OnesZeroes myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_474_OnesZeroes();
+        myClass = new L474OnesZeroes();
         convertor = new Convertor();
     }
 

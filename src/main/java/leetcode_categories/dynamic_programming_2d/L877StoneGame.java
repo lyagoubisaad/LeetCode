@@ -2,7 +2,7 @@ package leetcode_categories.dynamic_programming_2d;
 
 import java.util.Arrays;
 
-public class L_877_StoneGame {
+public class L877StoneGame {
     public boolean stoneGame(int[] piles) {
         int[][] memos = new int[piles.length][piles.length];
         for (int[] memo: memos) {

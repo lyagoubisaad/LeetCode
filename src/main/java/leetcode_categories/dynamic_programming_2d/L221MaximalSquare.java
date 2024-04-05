@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_221_MaximalSquare {
+public class L221MaximalSquare {
     public int maximalSquare(char[][] matrix) {
         int[][] dp = new int[matrix.length+1][matrix[0].length+1];
         int result = 0;

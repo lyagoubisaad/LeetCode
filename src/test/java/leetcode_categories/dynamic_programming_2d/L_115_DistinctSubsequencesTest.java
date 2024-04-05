@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_115_DistinctSubsequencesTest {
 
-    L_115_DistinctSubsequences myClass;
+    L115DistinctSubsequences myClass;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_115_DistinctSubsequences();
+        myClass = new L115DistinctSubsequences();
     }
 
     @Test

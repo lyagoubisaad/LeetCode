@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_63_UniquePathsII {
+public class L63UniquePathsII {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int[][] dp = new int[obstacleGrid.length][obstacleGrid[0].length];
         dp[obstacleGrid.length-1][obstacleGrid[0].length-1] = 1-obstacleGrid[obstacleGrid.length-1][obstacleGrid[0].length-1];

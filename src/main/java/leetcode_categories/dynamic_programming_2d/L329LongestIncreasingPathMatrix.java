@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_329_LongestIncreasingPathMatrix {
+public class L329LongestIncreasingPathMatrix {
     public int longestIncreasingPath(int[][] matrix) {
         int[][] directions = new int[][] {{1,0}, {-1,0}, {0,1}, {0,-1}};
         int longestIncreasingPath = 0;

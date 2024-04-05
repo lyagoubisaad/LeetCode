@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_877_StoneGameTest {
 
-    L_877_StoneGame myClass;
+    L877StoneGame myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_877_StoneGame();
+        myClass = new L877StoneGame();
         convertor = new Convertor();
     }
 

@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_1911_MaximumAlternatingSubsequenceSum {
+public class L1911MaximumAlternatingSubsequenceSum {
     public long maxAlternatingSum(int[] nums) {
         long[][] dp = new long[nums.length+1][2];
         for (int i=nums.length-1;i>=0;i--) {

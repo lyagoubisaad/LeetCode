@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_64_MinimumPathSumTest {
 
-    L_64_MinimumPathSum myClass;
+    L64MinimumPathSum myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_64_MinimumPathSum();
+        myClass = new L64MinimumPathSum();
         convertor = new Convertor();
     }
 

@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_312_BurstBalloonsTest {
 
-    L_312_BurstBalloons myClass;
+    L312BurstBalloons myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_312_BurstBalloons();
+        myClass = new L312BurstBalloons();
         convertor = new Convertor();
     }
 

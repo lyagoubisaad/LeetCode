@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_312_BurstBalloons {
+public class L312BurstBalloons {
     int maxCoins(int[] nums) {
         int[] newNums = new int[nums.length+2];
         System.arraycopy(nums, 0, newNums, 1, nums.length);

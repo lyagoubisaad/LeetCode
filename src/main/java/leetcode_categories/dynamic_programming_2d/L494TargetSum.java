@@ -2,7 +2,7 @@ package leetcode_categories.dynamic_programming_2d;
 
 import java.util.HashMap;
 
-public class L_494_TargetSum {
+public class L494TargetSum {
     public int findTargetSumWays(int[] nums, int target) {
         HashMap<String, Integer> cache = new HashMap<>();
         return helper(target, 0, nums, 0, cache);
@@ -21,7 +21,7 @@ public class L_494_TargetSum {
     }
 
     public static void main(String[] args) {
-        int result = new L_494_TargetSum().findTargetSumWays(new int[] {1,1,1,1,1}, 3);
+        int result = new L494TargetSum().findTargetSumWays(new int[] {1,1,1,1,1}, 3);
         System.out.println(result);
     }
 }

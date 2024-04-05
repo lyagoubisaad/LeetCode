@@ -8,12 +8,12 @@ import utils.Convertor;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class L_329_LongestIncreasingPathMatrixTest {
-    L_329_LongestIncreasingPathMatrix myClass;
+    L329LongestIncreasingPathMatrix myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_329_LongestIncreasingPathMatrix();
+        myClass = new L329LongestIncreasingPathMatrix();
         convertor = new Convertor();
     }
     

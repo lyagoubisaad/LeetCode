@@ -1,6 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-public class L_62_UniquePaths {
+public class L62UniquePaths {
     public int uniquePaths(int m, int n) {
         int[][] board = new int[m][n];
         for (int i=0;i<m;i++) {
@@ -18,6 +18,6 @@ public class L_62_UniquePaths {
     }
 
     public static void main(String[] args) {
-        new L_62_UniquePaths().uniquePaths(3,7);
+        new L62UniquePaths().uniquePaths(3,7);
     }
 }

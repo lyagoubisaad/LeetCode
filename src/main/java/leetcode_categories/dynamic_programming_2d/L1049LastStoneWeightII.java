@@ -1,9 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-
-public class L_1049_Last_Stone_Weight_II {
+public class L1049LastStoneWeightII {
     public int lastStoneWeightII(int[] stones) {
         int sum = 0;
         for (int stone : stones) {

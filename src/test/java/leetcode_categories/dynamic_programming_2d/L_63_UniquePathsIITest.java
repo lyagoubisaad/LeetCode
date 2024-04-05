@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_63_UniquePathsIITest {
 
-    L_63_UniquePathsII myClass;
+    L63UniquePathsII myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_63_UniquePathsII();
+        myClass = new L63UniquePathsII();
         convertor = new Convertor();
     }
 

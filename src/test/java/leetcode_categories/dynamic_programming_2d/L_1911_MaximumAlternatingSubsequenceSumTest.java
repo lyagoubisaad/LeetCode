@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_1911_MaximumAlternatingSubsequenceSumTest {
 
-    L_1911_MaximumAlternatingSubsequenceSum myClass;
+    L1911MaximumAlternatingSubsequenceSum myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_1911_MaximumAlternatingSubsequenceSum();
+        myClass = new L1911MaximumAlternatingSubsequenceSum();
         convertor = new Convertor();
     }
 

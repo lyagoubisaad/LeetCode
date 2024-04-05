@@ -1,8 +1,6 @@
 package leetcode_categories.dynamic_programming_2d;
 
-import java.util.Arrays;
-
-public class L_115_DistinctSubsequences {
+public class L115DistinctSubsequences {
     public int numDistinct(String s, String t) {
         int[][] dp = new int[s.length()+1][t.length()+1];
         for (int i=0;i<=s.length();i++) {

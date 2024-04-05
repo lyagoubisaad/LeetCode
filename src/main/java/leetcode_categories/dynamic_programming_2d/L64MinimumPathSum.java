@@ -3,7 +3,7 @@ package leetcode_categories.dynamic_programming_2d;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class L_64_MinimumPathSum {
+public class L64MinimumPathSum {
     public int minPathSum(int[][] grid) {
         int[][] directions = new int[][] {{1,0}, {0,1}};
         boolean[][] visited = new boolean[grid.length][grid[0].length];

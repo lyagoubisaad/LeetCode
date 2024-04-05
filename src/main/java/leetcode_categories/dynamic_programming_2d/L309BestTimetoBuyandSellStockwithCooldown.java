@@ -3,7 +3,7 @@ package leetcode_categories.dynamic_programming_2d;
 import java.util.HashMap;
 import java.util.Map;
 
-public class L_309_BestTimetoBuyandSellStockwithCooldown {
+public class L309BestTimetoBuyandSellStockwithCooldown {
     public int maxProfit(int[] prices) {
         Map<String, Integer> store = new HashMap<>();
         return helper(prices, 0, true, store);
@@ -29,7 +29,7 @@ public class L_309_BestTimetoBuyandSellStockwithCooldown {
     }
 
     public static void main(String[] args) {
-        int result = new L_309_BestTimetoBuyandSellStockwithCooldown().maxProfit(new int[]{2, 1, 2, 0, 1});
+        int result = new L309BestTimetoBuyandSellStockwithCooldown().maxProfit(new int[]{2, 1, 2, 0, 1});
         System.out.println(result);
     }
 

@@ -5,13 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class L_1866_NumberWaysRearrangeSticksWithKSticksVisibleTest {
-
-    L_1866_NumberWaysRearrangeSticksWithKSticksVisible myClass;
-
+public class L1866NumberWaysRearrangeSticksWithKSticksVisibleTest {
+    L1866NumberWaysRearrangeSticksWithKSticksVisible myClass;
     @BeforeEach
     void setUp() {
-        myClass = new L_1866_NumberWaysRearrangeSticksWithKSticksVisible();
+        myClass = new L1866NumberWaysRearrangeSticksWithKSticksVisible();
     }
 
     @Test

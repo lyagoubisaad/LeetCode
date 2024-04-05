@@ -3,7 +3,7 @@ package leetcode_categories.dynamic_programming_2d;
 import java.util.ArrayList;
 import java.util.List;
 
-public class L_1866_NumberWaysRearrangeSticksWithKSticksVisible {
+public class L1866NumberWaysRearrangeSticksWithKSticksVisible {
     public int rearrangeSticks(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
         backtrack(n, new ArrayList<>(), new boolean[n + 1], result);

@@ -9,12 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class L_221_MaximalSquareTest {
 
-    L_221_MaximalSquare myClass;
+    L221MaximalSquare myClass;
     Convertor convertor;
 
     @BeforeEach
     void setUp() {
-        myClass = new L_221_MaximalSquare();
+        myClass = new L221MaximalSquare();
         convertor = new Convertor();
     }
 
