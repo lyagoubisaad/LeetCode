@@ -1,6 +1,6 @@
 package leetcode_categories.arrays_hashings;
 
-public class L_912_Sort_an_Array {
+public class L912SortAnArray {
 
     public int[] sortArray(int[] nums) {
         mergeSort(nums, 0, nums.length-1);
@@ -48,9 +48,5 @@ public class L_912_Sort_an_Array {
             j++;
             k++;
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 }
