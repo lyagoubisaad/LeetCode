@@ -4,7 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L1049LastStoneWeightIITest {
 
@@ -21,8 +22,8 @@ public class L1049LastStoneWeightIITest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("[2,7,4,1,8,1]");
-        convertor.convert("[31,26,33,21,40]");
+        convertor.toBracesAndSingleQuotes("[2,7,4,1,8,1]");
+        convertor.toBracesAndSingleQuotes("[31,26,33,21,40]");
     }
 
     @Test

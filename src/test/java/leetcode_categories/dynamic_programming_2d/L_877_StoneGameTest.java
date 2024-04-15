@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class L_877_StoneGameTest {
 
@@ -21,7 +22,7 @@ public class L_877_StoneGameTest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("[5,3,4,5]\n" +
+        convertor.toBracesAndSingleQuotes("[5,3,4,5]\n" +
                 "[3,7,2,3]");
     }
 

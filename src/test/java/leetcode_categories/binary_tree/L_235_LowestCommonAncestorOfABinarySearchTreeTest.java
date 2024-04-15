@@ -1,7 +1,7 @@
 package leetcode_categories.binary_tree;
 
-import utils.TreeNode;
 import org.junit.Test;
+import utils.TreeNode;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

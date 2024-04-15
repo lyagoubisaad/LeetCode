@@ -2,7 +2,7 @@ package leetcode_categories.dynamic_programming_1d;
 
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_1359_CountValidPickupDeliveryOptionsTest {
 

@@ -2,8 +2,8 @@ package utils;
 
 import org.junit.Test;
 
-import static utils.maths.gcd;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static utils.maths.gcd;
 
 public class mathsTest {
 

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_63_UniquePathsIITest {
 
@@ -21,10 +21,10 @@ public class L_63_UniquePathsIITest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("[[0,0,0],[0,1,0],[0,0,0]]");
-        convertor.convert("[[0,1],[0,0]]");
-        convertor.convert("[[0,0],[0,1]]");
-        convertor.convert("[[0,0],[1,1],[0,0]]");
+        convertor.toBracesAndSingleQuotes("[[0,0,0],[0,1,0],[0,0,0]]");
+        convertor.toBracesAndSingleQuotes("[[0,1],[0,0]]");
+        convertor.toBracesAndSingleQuotes("[[0,0],[0,1]]");
+        convertor.toBracesAndSingleQuotes("[[0,0],[1,1],[0,0]]");
     }
 
     @Test

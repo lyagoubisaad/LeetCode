@@ -21,7 +21,7 @@ public class L_474_OnesZeroesTest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("""   
+        convertor.toBracesAndSingleQuotes("""   
                ["10","0001","111001","1","0"]
                ["10","0","1"]
                ["10","0001","111001","1","0"]

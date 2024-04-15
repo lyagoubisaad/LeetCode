@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_1911_MaximumAlternatingSubsequenceSumTest {
 
@@ -21,7 +21,7 @@ public class L_1911_MaximumAlternatingSubsequenceSumTest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("""   
+        convertor.toBracesAndSingleQuotes("""   
                 [4,2,5,3]
                 [5,6,7,8]
                 [6,2,1,2,4,5]

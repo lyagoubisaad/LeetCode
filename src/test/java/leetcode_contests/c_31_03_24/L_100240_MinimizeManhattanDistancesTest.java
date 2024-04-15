@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_100240_MinimizeManhattanDistancesTest {
 
@@ -14,10 +14,10 @@ public class L_100240_MinimizeManhattanDistancesTest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("[[3,10],[5,15],[10,2],[4,4]]");
-        convertor.convert("[[1,1],[1,1],[1,1]]");
-        convertor.convert("[[3,2],[3,9],[7,10],[4,4],[8,10],[2,7]]");
-        convertor.convert("[[9,8],[1,8],[3,1],[9,1],[7,7],[3,6]]");
+        convertor.toBracesAndSingleQuotes("[[3,10],[5,15],[10,2],[4,4]]");
+        convertor.toBracesAndSingleQuotes("[[1,1],[1,1],[1,1]]");
+        convertor.toBracesAndSingleQuotes("[[3,2],[3,9],[7,10],[4,4],[8,10],[2,7]]");
+        convertor.toBracesAndSingleQuotes("[[9,8],[1,8],[3,1],[9,1],[7,7],[3,6]]");
     }
 
     @Test

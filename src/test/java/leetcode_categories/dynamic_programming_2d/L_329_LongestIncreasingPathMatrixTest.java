@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_329_LongestIncreasingPathMatrixTest {
     L329LongestIncreasingPathMatrix myClass;
@@ -20,7 +20,7 @@ public class L_329_LongestIncreasingPathMatrixTest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("""   
+        convertor.toBracesAndSingleQuotes("""   
                 [[9,9,4],[6,6,8],[2,1,1]]
                 [[3,4,5],[3,2,6],[2,2,1]]
                 [[1]]

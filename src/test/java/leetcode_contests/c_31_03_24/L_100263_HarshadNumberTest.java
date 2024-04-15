@@ -2,7 +2,7 @@ package leetcode_contests.c_31_03_24;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_100263_HarshadNumberTest {
 

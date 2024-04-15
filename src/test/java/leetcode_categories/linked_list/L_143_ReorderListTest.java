@@ -1,11 +1,11 @@
 package leetcode_categories.linked_list;
 
 import leetcode_categories.arrays_hashings.L_508_WiggleSort;
-import utils.ListNode;
 import org.junit.Test;
+import utils.ListNode;
 
-import static utils.ListNode.compare;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static utils.ListNode.compare;
 
 
 public class L_143_ReorderListTest {

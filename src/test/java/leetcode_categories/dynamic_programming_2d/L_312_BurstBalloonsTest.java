@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import utils.Convertor;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_312_BurstBalloonsTest {
 
@@ -21,7 +21,7 @@ public class L_312_BurstBalloonsTest {
     @Disabled
     @Test
     void convert() {
-        convertor.convert("""   
+        convertor.toBracesAndSingleQuotes("""   
                 [3,1,5,8]
                 [1,5]
                 [2,3,7,9,1,8,2]
