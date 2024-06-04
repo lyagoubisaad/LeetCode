@@ -4,8 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import utils.TestUtils;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class L1992FindAllGroupsFarmlandTest {
 
     L1992FindAllGroupsFarmland myClass;

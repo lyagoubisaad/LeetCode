@@ -1,6 +1,9 @@
 package leetcode_categories.string;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class L49GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {

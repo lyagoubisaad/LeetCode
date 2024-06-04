@@ -1,8 +1,5 @@
 package leetcode_categories.prefix_sum;
 
-import java.util.HashMap;
-import java.util.HashSet;
-
 public class L1658MinimumOperationsReduceXZero {
 
     int minOperations = Integer.MAX_VALUE;

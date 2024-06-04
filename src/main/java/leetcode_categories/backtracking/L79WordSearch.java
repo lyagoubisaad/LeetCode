@@ -14,10 +14,10 @@ public class L79WordSearch {
     private boolean dfs(int i, int j, char[][] board, boolean[][] seen, int idx, String word, int[][] directions) {
         if(idx >= word.length()) return true;
         if(idx == word.length()-1 && word.charAt(idx) == board[i][j]) return true;
+        seen[i][j] = true;
         if(board[i][j] == word.charAt(idx)) {
             for (int[] direction: directions) {
                 if(isNotValid(i+direction[0], j+direction[1], board) || seen[i+direction[0]][j+direction[1]]) continue;
-                seen[i][j] = true;
                 if(dfs(i+direction[0], j+ direction[1], board, seen, idx+1, word, directions)) return true;
             }
         }
