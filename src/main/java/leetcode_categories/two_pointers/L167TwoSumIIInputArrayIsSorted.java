@@ -2,14 +2,12 @@ package leetcode_categories.two_pointers;
 
 public class L167TwoSumIIInputArrayIsSorted {
     public int[] twoSum(int[] numbers, int target) {
-        int left = 0;
-        int right = numbers.length-1;
-        int currSum;
-        while (left<right) {
-            currSum = numbers[left] + numbers[right];
-            if(currSum < target) left++;
-            if(currSum > target) right--;
-            else return new int[] {left+1, right+1};
+        int first = 0;
+        int last = numbers.length-1;
+        while (first<last) {
+            if(numbers[first] + numbers[last] == target) return new int[] {first+1, last+1};
+            else if(numbers[first] + numbers[last] < target) first++;
+            else last--;
         }
         return new int[] {};
     }

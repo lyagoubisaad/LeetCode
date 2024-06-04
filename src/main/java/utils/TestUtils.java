@@ -29,6 +29,15 @@ public class TestUtils {
         }
     }
 
+    public static void assertArrayEquals(Integer[] expected, Integer[] actual) {
+        if (!Arrays.equals(expected, actual)) {
+            throw new AssertionError(
+                    "Expected: " + Arrays.toString(expected) +
+                            " Actual: " + Arrays.toString(actual)
+            );
+        }
+    }
+
     public static void assertArrayEquals(int[] expected, int[] actual, int endIndex) {
         if (expected.length != actual.length) {
             throw new AssertionError("Arrays have different lengths.");

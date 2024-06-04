@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class L_141_LinkedListCycleTest {
 
-    L_141_LinkedListCycle myClass = new L_141_LinkedListCycle();
+    L141LinkedListCycle myClass = new L141LinkedListCycle();
 
     @Test
     public void firstTest() {

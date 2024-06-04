@@ -25,6 +25,7 @@ public class ListNode {
     }
 
     public void push_back(int[] arr) {
+        if(arr.length == 0) return;
         if (this.next == null) {
             this.val = arr[0];
             for (int i = 1; i < arr.length; i++) {

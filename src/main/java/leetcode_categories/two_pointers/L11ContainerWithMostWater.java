@@ -2,20 +2,15 @@ package leetcode_categories.two_pointers;
 
 public class L11ContainerWithMostWater {
     public int maxArea(int[] height) {
-        int maxL=0;
-        int n=height.length;
-        int i=0;
-        int j=n-1;
-        while(i<j){
-            int h=Math.min(height[i],height[j]);
-            maxL=Math.max(maxL,h*(j-i));
-            while(i<j && height[i]<=h){
-                i++;
-            }
-            while(i<j && height[j]<=h){
-                j--;
-            }
+        int left = 0;
+        int right = height.length-1;
+        int max = 0;
+        while (left < right) {
+            max = Math.max(max, Math.min(height[left], height[right])  * (right-left));
+            if(height[left] < height[right]) {
+                left++;
+            } else right--;
         }
-        return maxL;
+        return max;
     }
 }

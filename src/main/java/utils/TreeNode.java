@@ -1,5 +1,9 @@
 package utils;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -44,11 +48,25 @@ public class TreeNode {
         return compare(this, (TreeNode) obj);
     }
 
-    public boolean compare(TreeNode treeNode1, TreeNode treeNode2) {
+    public static boolean compare(TreeNode treeNode1, TreeNode treeNode2) {
         if(treeNode1 == null && treeNode2 == null) return true;
         if(treeNode1 == null || treeNode2 == null) return false;
         if(treeNode1.val != treeNode2.val) return false;
         return (compare(treeNode1.left, treeNode2.left) && compare(treeNode1.right, treeNode2.right));
+    }
+    public static Integer[] inorderTraversal(TreeNode root) {
+        Stack<TreeNode> stk = new Stack<>();
+        ArrayList<Integer> result = new ArrayList<>();
+        while (root != null || !stk.isEmpty()) {
+            while (root != null) {
+                stk.push(root);
+                root = root.left;
+            }
+            root = stk.pop();
+            result.add(root.val);
+            root = root.right;
+        }
+        return result.toArray(new Integer[0]);
     }
 }
 

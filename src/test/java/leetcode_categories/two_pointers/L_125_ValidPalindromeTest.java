@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L_125_ValidPalindromeTest {
 
-    L_125_ValidPalindrome myClass = new L_125_ValidPalindrome();
+    L125ValidPalindrome myClass = new L125ValidPalindrome();
 
     @Test
     public void firstTest() {

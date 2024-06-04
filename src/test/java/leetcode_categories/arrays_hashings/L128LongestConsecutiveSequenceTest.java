@@ -30,4 +30,12 @@ public class L128LongestConsecutiveSequenceTest {
         assertEquals(9, actual);
     }
 
+    @Test
+    public void testThird() {
+        //When
+        int actual = myClass.longestConsecutive(new int[] {1,2,0,1});
+        //Then
+        assertEquals(3, actual);
+    }
+
 }
