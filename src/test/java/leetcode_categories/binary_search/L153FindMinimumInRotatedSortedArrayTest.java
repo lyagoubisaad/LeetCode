@@ -6,9 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class L153FindMinimumInRotatedSortedArrayTest {
-
     L153FindMinimumInRotatedSortedArray myClass;
-
     @BeforeEach
     void setUp() {
         myClass = new L153FindMinimumInRotatedSortedArray();

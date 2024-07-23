@@ -5,48 +5,54 @@ import java.util.List;
 
 public class L417PacificAtlanticWaterFlow {
     public List<List<Integer>> pacificAtlantic(int[][] heights) {
-        int[][] directions = new int[][] {{-1,0}, {1,0}, {0,-1}, {0,1}};
         List<List<Integer>> pacificAtlantic = new ArrayList<>();
         boolean[][] pacific = new boolean[heights.length][heights[0].length];
         boolean[][] atlantic = new boolean[heights.length][heights[0].length];
         for (int i=0;i<heights.length;i++) {
-            for (int j=0;j<heights[0].length;j++) {
-                dfs(i, j, heights, directions, pacific, atlantic, new boolean[heights.length][heights[0].length]);
-            }
+            atlantic[i][heights[0].length-1] = true;
+            pacific[i][0] = true;
         }
+        for (int i=0;i<heights[0].length;i++) {
+            atlantic[heights.length-1][i] = true;
+            pacific[0][i] = true;
+        }
+        int[][] directions = new int[][] {{-1,0}, {1,0}, {0,-1}, {0,1}};
         for (int i=0;i<heights.length;i++) {
-            for (int j=0;j<heights[0].length;j++) {
-                if(pacific[i][j] && atlantic[i][j]) {
-                    pacificAtlantic.add(List.of(i,j));
-                }
+            for (int j=0;j<heights[i].length;j++) {
+                if(isPacific(i, j, heights, pacific, directions) && isAtlantic(i, j, heights, atlantic, directions)) pacificAtlantic.add(List.of(i,j));
             }
         }
         return pacificAtlantic;
     }
 
-    private void dfs(int i, int j, int[][] heights, int[][] directions, boolean[][] pacific, boolean[][] atlantic, boolean[][] seen) {
-        if(i == 0 || j== 0) {
-            pacific[i][j] = true;
-        }
-        if(i == heights.length-1 || j==heights[0].length-1) {
-            atlantic[i][j] = true;
-        }
-        if(atlantic[i][j] && pacific[i][j]) return;
-        seen[i][j] = true;
+    private boolean isPacific(int i, int j, int[][] heights, boolean[][] pacific, int[][] directions) {
+        if(pacific[i][j]) return true;
+        int oldValue = heights[i][j];
+        heights[i][j] = -1;
         for (int[] direction: directions) {
-            if(isValid(i+direction[0], j+direction[1], heights) && !seen[i + direction[0]][j + direction[1]]) {
-                dfs(i+direction[0], j+direction[1], heights, directions, pacific, atlantic, seen);
-                if(heights[i+direction[0]][j+direction[1]] > heights[i][j]) return;
-                else {
-                    atlantic[i][j] |= atlantic[i+direction[0]][j+direction[1]];
-                    pacific[i][j] |= pacific[i+direction[0]][j+direction[1]];
-                }
-            }
+            if(isNotValid(direction[0]+i, direction[1]+j, heights) || heights[i+direction[0]][j+direction[1]] == -1 || oldValue < heights[i+direction[0]][j+direction[1]]) continue;
+            pacific[i][j] = isPacific(direction[0]+i, direction[1]+j, heights, pacific, directions);
+            if(pacific[i][j]) break;
         }
+        heights[i][j] = oldValue;
+        return pacific[i][j];
     }
 
-    private boolean isValid(int i, int j, int[][] heights) {
-        return i >= 0 && j >= 0 && i < heights.length && j < heights[0].length;
+    private boolean isNotValid(int i, int j, int[][] heights) {
+        return i < 0 || i >= heights.length || j < 0 || j >= heights[0].length;
+    }
+
+    private boolean isAtlantic(int i, int j, int[][] heights, boolean[][] atlantic, int[][] directions) {
+        if(atlantic[i][j]) return true;
+        int oldValue = heights[i][j];
+        heights[i][j] = -1;
+        for (int[] direction: directions) {
+            if(isNotValid(direction[0]+i, direction[1]+j, heights) || heights[i+direction[0]][j+direction[1]] == -1 || oldValue < heights[i+direction[0]][j+direction[1]]) continue;
+            atlantic[i][j] = isAtlantic(direction[0]+i, direction[1]+j, heights, atlantic, directions);
+            if(atlantic[i][j]) break;
+        }
+        heights[i][j] = oldValue;
+        return atlantic[i][j];
     }
 
 }

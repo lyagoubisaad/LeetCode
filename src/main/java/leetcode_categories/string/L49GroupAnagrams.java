@@ -1,17 +1,15 @@
 package leetcode_categories.string;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class L49GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String >> map = new HashMap<>();
         for (String str : strs) {
-            char[] word = str.toCharArray();
-            Arrays.sort(word);
-            map.computeIfAbsent(Arrays.toString(word), val -> new ArrayList<>()).add(str);
+            char[] wordArray = str.toCharArray();
+            Arrays.sort(wordArray);
+            String word = new String(wordArray);
+            map.computeIfAbsent(word, val -> new ArrayList<>()).add(str);
         }
         return new ArrayList<>(map.values());
     }

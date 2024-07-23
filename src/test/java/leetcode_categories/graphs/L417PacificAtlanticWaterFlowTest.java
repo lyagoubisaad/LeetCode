@@ -29,7 +29,9 @@ public class L417PacificAtlanticWaterFlowTest {
                 [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
                 [[0,0]]     
                 [[1,1],[1,1],[1,1]]        
-                [[3,3,3,3,3,3],[3,0,3,3,0,3],[3,3,3,3,3,3]]               
+                [[3,3,3,3,3,3],[3,0,3,3,0,3],[3,3,3,3,3,3]]      
+                [[3,3,3,3,3,3],[3,0,3,3,0,3],[3,3,3,3,3,3]]         
+                [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,0],[1,2],[1,3],[1,5],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5]]
                 """);
     }
 
@@ -71,6 +73,20 @@ public class L417PacificAtlanticWaterFlowTest {
         //Given
         int[][] heights = new int[][] {{1,1},{1,1},{1,1}};
         List<List<Integer>> expected = List.of(List.of(0,0), List.of(0,1), List.of(1,0), List.of(1,1), List.of(2,0), List.of(2,1));
+        //When
+        List<List<Integer>> result = myClass.pacificAtlantic(heights);
+        //Then
+        assertEquals(expected, result);
+    }
+    @Test
+    public void testFifth() {
+        //Given
+        int[][] heights = new int[][] {{3,3,3,3,3,3},{3,0,3,3,0,3},{3,3,3,3,3,3}};
+        List<List<Integer>> expected = List.of(
+                List.of(0, 0), List.of(0, 1), List.of(0, 2), List.of(0, 3), List.of(0, 4), List.of(0, 5),
+                List.of(1, 0), List.of(1, 2), List.of(1, 3), List.of(1, 5),
+                List.of(2, 0), List.of(2, 1), List.of(2, 2), List.of(2, 3), List.of(2, 4), List.of(2, 5)
+        );
         //When
         List<List<Integer>> result = myClass.pacificAtlantic(heights);
         //Then

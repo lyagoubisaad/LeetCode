@@ -47,7 +47,7 @@ public class L102BinaryTreeLevelOrderTraversalTest {
     public void testThird() {
         //Given
         TreeNode root = TreeNode.formTree(new Integer[] {});
-        List<List<Integer>> expected = List.of(List.of());
+        List<List<Integer>> expected = List.of();
         //When
         List<List<Integer>> result = myClass.levelOrder(root);
 
